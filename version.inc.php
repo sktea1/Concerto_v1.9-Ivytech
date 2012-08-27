@@ -24,6 +24,6 @@
  * @version      $Revision$
  */
 
-define('CONCERTO_VERSION', '1.9.3');
+define('CONCERTO_VERSION', '1.9.3 ivytech-sk1');
 
 ?>
