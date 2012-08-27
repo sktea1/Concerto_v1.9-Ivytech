@@ -52,6 +52,8 @@ define('HARDWARE_URL', ROOT_URL.'hardware/');    //location of management for on
 define('ADMIN_BASE_URL', ROOT_URL.'admin/');     //base URL on server for images, css, etc. for interface
 define('ADMIN_URL', ADMIN_BASE_URL.'index.php'); //URL that can access this page (may be same as ADMIN_BASE_URL if mod_rewrite configured)
 
+define('CAS_URL', 'cas.ivytech.edu');
+
 //Various configuration
 define('DEFAULT_DURATION', 5);                   //Default content duration, in seconds
 define('DEFAULT_WEIGHT', 3);                     //Default position weight
