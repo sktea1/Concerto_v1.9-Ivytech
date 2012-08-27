@@ -1,0 +1,83 @@
+<?php
+/**
+ * This file was developed as part of the Concerto digital signage project
+ * at RPI.
+ *
+ * Copyright (C) 2009 Rensselaer Polytechnic Institute
+ * (Student Senate Web Technologies Group)
+ *
+ * This program is free software; you can redistribute it and/or modify it 
+ * under the terms of the GNU General Public License as published by the Free
+ * Software Foundation; either version 2 of the License, or (at your option)
+ * any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.  You should have received a copy
+ * of the GNU General Public License along with this program.
+ *
+ * @package      Concerto
+ * @author       Web Technologies Group, $Author$
+ * @copyright    Rensselaer Polytechnic Institute
+ * @license      GPLv2, see www.gnu.org/licenses/gpl-2.0.html
+ * @version      $Revision$
+ */
+
+/**
+ * config.inc.php
+ * 
+ * Concerto system configuration - where people can't get to it
+ */
+
+//Database Connection
+$db_host = 'localhost';
+$db_login = 'user';
+$db_password = 'password';
+$db_database = 'concerto';
+
+//Important paths
+
+define('ROOT_DIR', '/var/www/');                    //server-side path where Concerto lives
+define('COMMON_DIR', ROOT_DIR.'common/');             //server-side path to dir with resources for
+                                                       //  multiple portions of Concerto, must end in a "/"
+define('CONTENT_DIR', ROOT_DIR.'content/');      //server-side path to content images
+define('IMAGE_DIR', CONTENT_DIR.'images/');      //server-side path to content images
+define('TEMPLATE_DIR', CONTENT_DIR.'templates/');//server-side path to screen templates
+
+//URLS for hyperlinks and the like
+define('ROOT_URL', '/');                         //the root location where Concerto lives
+define('SCREEN_URL', ROOT_URL.'screen/');        //location of front-end screen program
+define('HARDWARE_URL', ROOT_URL.'hardware/');    //location of management for on-location machines
+define('ADMIN_BASE_URL', ROOT_URL.'admin/');     //base URL on server for images, css, etc. for interface
+define('ADMIN_URL', ADMIN_BASE_URL.'index.php'); //URL that can access this page (may be same as ADMIN_BASE_URL if mod_rewrite configured)
+
+//Various configuration
+define('DEFAULT_DURATION', 5);                   //Default content duration, in seconds
+define('DEFAULT_WEIGHT', 3);                     //Default position weight
+
+define('EMS_FEED_ID', false);                    //ID of the emergency feed.
+define('ADMIN_GROUP_ID', 0);                     //ID of the User Group for admin functions and contact
+define('GA_TRACKING', false);                    //Define a Google Tracking id if applicable
+define('TICKER_LIMIT', 150);                     //Ticket Text character limit
+define('SYSTEM_EMAIL', 'admin@example.com');    //Email address used for system emails
+
+//Frontpage Selection (uncomment to choose the default info page of category 'front'
+//define('DEFAULT_PATH','pages/show/front');
+
+//Domain Redirection
+//Use this to force visitors to your installation using one domain name
+//to be redirected to the same page they requested, but on a different domain.
+//Useful for aliased or transitioning DNS names.
+//define('PREFERRED_DOMAIN','concerto.example.com');
+
+//Define screen rotation rules
+//The array should be setup as follows, $screen_rotate[screen_id][] = template_id
+//Make sure you have subscriptions setup!
+
+//Optional: Memcache Configuration
+define('MEMCACHE_ENABLE', false); //False disables memcache, true enables it
+define('MEMCACHE_SERVER', 'localhost');
+define('MEMCACHE_PORT', 11211);
+
+?>
