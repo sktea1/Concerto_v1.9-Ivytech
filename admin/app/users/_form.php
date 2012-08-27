@@ -50,7 +50,7 @@
          </td>
         <? if (!isLoggedIn()){ ?>
        <tr>
-         <td><h5>Username</h5></td>
+         <td><h5>Username (Campus Connect ID)</h5></td>
          <td>
            <input type="text" id="username" name="user[username]" value="">
          </td>
@@ -69,7 +69,7 @@
        </tr>
        <? } elseif (isLoggedIn() && $_SESSION['user']->username != $user->username) { ?>
        <tr>
-         <td><h5>Username</h5></td>
+         <td><h5>Username (Campus Connect ID)</h5></td>
          <td>
            <input type="text" id="username" name="user[username]" value="<?=$user->username?>">
          </td>
@@ -94,7 +94,7 @@
        </tr>
        <? } else {?>
        <tr>
-         <td><h5>Username</h5></td>
+         <td><h5>Username (Campus Connect ID)</h5></td>
          <td>
            <?=$user->username ?>
          </td>

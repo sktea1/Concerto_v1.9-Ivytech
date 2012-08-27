@@ -47,7 +47,7 @@
 	<?php
 	} else {
 	?>
-		<h1 class="fp">Have a username and password?  If so, you can log into Concerto to the left.</h1>
+		<h1 class="fp">Have an Ivy Tech Campus Connect username and password?  If so, you can log into Concerto to the left.</h1>
 		<p>Concerto is 100% free to use for all current members of the your community.</p>
 	<?php 
 	}
