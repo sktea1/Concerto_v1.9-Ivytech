@@ -48,7 +48,7 @@
       }
 
 	if(isset($screen->width) && isset($screen->height)){
-		if ($screen->width/$screen->height==(16/9)){
+		if ($screen->width/$screen->height>=(16/9)){
 			$ratio = "16:9";
 			if ($screen->is_connected()) {
 				if (!$screen->get_powerstate()) {

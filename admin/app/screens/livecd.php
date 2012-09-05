@@ -30,7 +30,7 @@
 <?php
 
  if(isset($this->livecd['width']) && isset($this->livecd['height'])){
-		if ($this->livecd['width']/$this->livecd['height']==(16/9)){
+		if ($this->livecd['width']/$this->livecd['height']>=(16/9)){
 			$ratio = "16:9";
 			$scrimg="screen_169_on_big.png";
 		} else if ($this->livecd['width']/$this->livecd['height']==(16/10)) {

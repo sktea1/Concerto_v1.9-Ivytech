@@ -86,7 +86,7 @@
 	<h3>Screens:</h3>
 	<?php
 foreach($this->screens as $screen){
-   if ($screen->width/$screen->height==(16/9)){
+   if ($screen->width/$screen->height>=(16/9)){
       if ($screen->is_connected()) {
       	if (!$screen->get_powerstate()) {
 					$status = "Asleep";
