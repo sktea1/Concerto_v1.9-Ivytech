@@ -178,7 +178,7 @@ class frontpageController extends Controller
 	       $users = array_unique($users);
 	     } //End big block to build the recipients array
 	     if(sizeof($users) == 0){
-	       $this->flash('Emails must at least one recipient.','error');
+	       $this->flash('Emails must have at least one recipient.','error');
 	       redirect_to(ADMIN_URL.'/frontpage/mailer');
 	     }
 	     $status = true;
@@ -188,9 +188,9 @@ class frontpageController extends Controller
 	       $status = $status * $retval; 
 	     }
 	     if(!$status){
-	       $this->flash('The mail function returned false, some messages may not have gotten delivered.','warn');
+	       $this->flash('The mail function returned false, some messages may not have been delivered.','warn');
 	     } else {
-	       $this->flash('It appears the messages were sucessfully sent.','info');
+	       $this->flash('It appears the messages were successfully sent.','info');
 	     }
 	     redirect_to(ADMIN_URL.'/frontpage/mailer');
 	}
@@ -299,8 +299,8 @@ class frontpageController extends Controller
 	function logoutAction()
 	{
 		login_logout();
-		$this->flash('You were sucessfully logged out.', 'info');
-		//$_SESSION['flash'][] = array('info','You were sucessfully logged out.');
+		$this->flash('You were successfully logged out.', 'info');
+		//$_SESSION['flash'][] = array('info','You were successfully logged out.');
 		redirect_to(ADMIN_URL);
 	}
 }
