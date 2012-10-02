@@ -51,7 +51,7 @@
 <div class="roundcont">
   <div class="roundtop"><span class="rt"><img src="<? echo ADMIN_BASE_URL ?>/images/blsp.gif" height="6" width="1" alt="" /></span></div>
   <div class="roundcont_main">
-  <h1>Page Load Statisics</h1>
+  <h1>Page Load Statistics</h1>
   <form method="POST">
     <input type="submit" name="stats" value="Turn <?= (array_key_exists('stats', $_SESSION) && $_SESSION['stats']) ?'Off':'On'?>" />
   </form>
