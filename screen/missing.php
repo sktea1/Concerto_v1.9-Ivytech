@@ -81,7 +81,7 @@ text-align: center;
 				<tr>
 					<td>
 						The MAC address <?= $mac ?> cannot be found	in the database.<br/>
-						Please verify	that this screen has been added to the system.
+						Please verify that this screen has been added to <?= preg_replace('/\..*/s','',$_SERVER['SERVER_NAME']) ?>. 
 					</td>
 				</tr>
 
