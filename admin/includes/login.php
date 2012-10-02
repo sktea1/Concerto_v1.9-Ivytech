@@ -35,13 +35,13 @@
  */
 
 //Get and setup the CAS client
-//include('CAS/CAS.php');
-//phpCAS::client(CAS_VERSION_2_0,CAS_URL,443,'/cas');
+include('CAS/CAS.php');
+phpCAS::client(CAS_VERSION_2_0,CAS_URL,443,'/cas');
+phpCAS::setDebug('/var/log/phpcas/phpcas.log');
 
-//the following functions are accessors to the login functionality
-//they are designed for use as "requirements" of site actions
-//should return true, or perform some action before returning;
-//false indicates an error.
+//the following functions are designed for use as "requirements" 
+//of site actions should return true, or perform some action 
+//before returning; false indicates an error.
 function check_login($callback)
 {
    if(isLoggedIn())
