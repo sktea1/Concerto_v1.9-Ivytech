@@ -49,7 +49,7 @@
          <td><h5>Controlling Group</h5></td>
          <td><select name="feed[group]">
                 <option value=""<?php if(!isset($feed->group_id)) echo ' SELECTED'; ?>></option>
-             <?php $groups = sql_select('group',array('id','name'));
+             <?php $groups = sql_select('group',array('id','name'), NULL, 'ORDER BY name');
                    if(is_array($groups))
                      foreach($groups as $group) {
              ?>
