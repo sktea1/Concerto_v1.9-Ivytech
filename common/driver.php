@@ -158,7 +158,15 @@ class ContentDriver{
 			
                     if($data['mime_type'] == 'text/time'){ //This executes time code
                         $json['mime_type'] = 'text/html';
-                        $json['content'] = date($data['content']);
+\\              added by SK 2013-05-10 to support Evansville in Central time zone
+\\              also added to data.sql in install folder 
+                        if($data['id'] == 2){
+                        $date = new DateTime(null, new DateTimeZone('US/Central'));
+                        $json['content'] = $date->format($data['content']);
+                        } else {
+                        $date = new DateTime(null, new DateTimeZone('US/Eastern'));
+                        $json['content'] = $date->format($data['content']);
+\\                        $json['content'] = date($data['content']);
                     }
                     $this->log_back();
                     return $json;

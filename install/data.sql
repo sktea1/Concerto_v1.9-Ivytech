@@ -1,9 +1,12 @@
 # This file supplies some default data new concerto installs require
 # Populating and configuring admin user/group and the date/time feed
 
-INSERT INTO `feed` (`id`, `name`, `group_id`, `type`, `dynamic_id`, `description`) VALUES (1, 'System Time & Date', 0, 2, NULL, '');
+INSERT INTO `feed` (`id`, `name`, `group_id`, `type`, `dynamic_id`, `description`) VALUES (1, 'System Time & Date (Eastern)', 0, 2, NULL, '');
 INSERT INTO `content` (`id`, `name`, `user_id`, `content`, `mime_type`, `type_id`, `duration`, `start_time`, `end_time`, `submitted`) VALUES (1, 'System Time & Date', 0, 'D m\\/d h:i A ', 'text/time', 1, 30000, NULL, NULL, '0000-00-00 00:00:00');
 INSERT INTO `feed_content` (`feed_id` ,`content_id` ,`moderation_flag` ,`moderator_id` ,`duration` ,`display_count` ,`yesterday_count`)VALUES ('1', '1', '1', '0', '30000', '0', '0');
+INSERT INTO `feed` (`id`, `name`, `group_id`, `type`, `dynamic_id`, `description`) VALUES (2, 'System Time & Date (Central)', 0, 2, NULL, '');
+INSERT INTO `content` (`id`, `name`, `user_id`, `content`, `mime_type`, `type_id`, `duration`, `start_time`, `end_time`, `submitted`) VALUES (2, 'System Time & Date', 0, 'D m\\/d h:i A ', 'text/time', 1, 30000, NULL, NULL, '0000-00-00 00:00:00');
+INSERT INTO `feed_content` (`feed_id` ,`content_id` ,`moderation_flag` ,`moderator_id` ,`duration` ,`display_count` ,`yesterday_count`)VALUES ('2', '2', '1', '0', '30000', '0', '0');
 INSERT INTO `group` (`id`, `name`) VALUES (0, 'System Administrator');
 UPDATE `group` SET `id` = 0 WHERE `id` = 1;
 INSERT INTO `page_category` (`id`, `path`, `name`, `layout`, `default_page`) VALUES (1, 'docs', 'Documents', 'docs_layout.php', 2);
