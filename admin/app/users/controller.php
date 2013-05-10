@@ -47,7 +47,7 @@ class usersController extends Controller
    
    function listAction()
    {
-      $userids = sql_select("user","username");
+      $userids = sql_select("user","username", NULL, "ORDER BY name");
       $this->users=Array();
       if(is_array($userids))
          foreach($userids as $user)
