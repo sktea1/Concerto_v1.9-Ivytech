@@ -432,7 +432,7 @@ class Feed{
             }
         }
 
-        //Everyoneone else can do stuff dependent on the feed's type.
+        //Everyone else can do stuff dependent on the feed's type.
         if($action == 'browse') {
             return $this->type != 3;
         } elseif($action == 'submittable') {
@@ -445,7 +445,7 @@ class Feed{
 	function priv_get($obj, $action='list'){
 		if($action == 'subscribe'){
 			$scr_group = $obj->group_id;
-			$sql = "SELECT id FROM feed WHERE type = 0 OR type = 1 OR type = 2 OR type = 4 OR (type = 3 AND group_id = $scr_group)";
+			$sql = "SELECT id FROM feed WHERE type = 0 OR type = 1 OR type = 2 OR type = 4 OR (type = 3 AND group_id = $scr_group) ORDER BY name";
 		}elseif($action == 'content'){
 			$group_string = implode(',',$obj->groups);
 			if($group_string != ""){ //We can only check for groups if they are in one!
@@ -457,7 +457,7 @@ class Feed{
 			if($group_string != ""){
 				$group_string = "OR (type = 3 AND group_id IN ($group_string))";
 			}
-			$sql = "SELECT id FROM feed WHERE type = 0 OR type = 1 OR type = 2 OR type = 4 $group_string";
+			$sql = "SELECT id FROM feed WHERE type = 0 OR type = 1 OR type = 2 OR type = 4 $group_string ORDER BY name";
 		}elseif($action == 'dynamic'){
 			$group_string = implode(',',$obj->groups);
 			$sql = "SELECT id FROM feed WHERE type = 4 AND group_id IN ($group_string)";
