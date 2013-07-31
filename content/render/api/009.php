@@ -270,7 +270,7 @@ function render_rss($content_arr, $criteria){
        /* If mod_rewrite isn't enabled, this won't work, but it is required for some clients that care about file extensions
         * Without mod_rewrite, you can just use remove "'image_' . $content->content"
         */
-        $raw_link = 'http://' . $_SERVER['SERVER_NAME'] .  $script_name . 'image_' . $content->content . '?' . criteria_string($criteria) . '&select=content&select_id='.$content->id.'&format=raw&file_ext=.' . $file_ext;
+        $raw_link = 'http://' . $_SERVER['SERVER_NAME'] .  $script_name . '?' . criteria_string($criteria) . '&select=content&select_id='.$content->id.'&format=raw&file_ext=.' . $file_ext;
         
         if(strpos($content->mime_type,'image') !== false){
             $desc = '<![CDATA[ <img src="' . $rss_link . '" /> ]]>';

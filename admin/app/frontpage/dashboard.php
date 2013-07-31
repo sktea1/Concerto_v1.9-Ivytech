@@ -61,28 +61,47 @@ $(function()
 	});
 }); 
 //--></script>
-
-<div class="roundcont">
-  <div class="roundtop"><span class="rt"><img src="<?= ADMIN_BASE_URL ?>/images/blsp.gif" height="6" width="1" alt="" /></span></div>
-  <div class="roundcont_main">
-    <div style="float:left; width:65%;">
-    	<a href="<?= ADMIN_URL ?>/wall"><img border="0" src="<?= ADMIN_BASE_URL ?>/images/wall/wall-words.gif" alt="" /></a>
-    	<br /><br />
-    	<p><a href="<?= ADMIN_URL ?>/wall">Concerto Wall</a> is an interactive feature that allows you to view live graphical Concerto content.  Visit the Wall now to peruse live content in a completely new way!</p>
-    </div>
-    <div style="float:right; text-align:right; width:33%;"><a href="<?= ADMIN_URL ?>/wall"><img src="<?= ADMIN_BASE_URL ?>/images/wall/wall-announce.jpg" border="0" alt="" /></a></div>
-    <div style="clear:both;"></div>
-  </div>
-  <div class="roundbottom"><span class="rb"><img src="<?= ADMIN_BASE_URL ?>/images/blsp.gif" height="6" width="1" alt="" /></span></div>
+<div style="float:left; width:49%;">
+        <div class="roundcont">
+          <div class="roundtop"><span class="rt"><img src="<?= ADMIN_BASE_URL ?>/images/blsp.gif" height="6" width="1" alt="" /></span></div>
+          <div class="roundcont_main">
+            <div>
+                <div style="float:right; text-align:right; width:230px;"><a href="<?= ADMIN_URL ?>/wall"><img src="<?= ADMIN_BASE_URL ?>/images/wall/wall-announce.jpg" border="0" alt="" /></a></div>
+                <h1><a href="<?= ADMIN_URL ?>/wall">Visit the Concerto Wall</a></h1>
+                                <br />
+                <p>Explore Concerto graphical content in a grid view.</p>
+                <br /><br />
+                <div style="clear:both;"></div>
+            </div>
+          </div>
+          <div class="roundbottom"><span class="rb"><img src="<?= ADMIN_BASE_URL ?>/images/blsp.gif" height="6" width="1" alt="" /></span></div>
+        </div>
 </div>
-
+<div style="float:right; width:49%;">
+        <div class="roundcont">
+          <div class="roundtop"><span class="rt"><img src="<?= ADMIN_BASE_URL ?>/images/blsp.gif" height="6" width="1" alt="" /></span></div>
+          <div class="roundcont_main">
+		     <div>
+                <div style="float:right; text-align:right; width:230px;"><a href="<?= ADMIN_URL ?>/wall"><img src="<?= ADMIN_BASE_URL ?>/images/wall/ss-announce.jpg" border="0" alt="" /></a></div>
+				<h1><a href="<?= ADMIN_URL ?>/wall">Concerto for Ivy Tech</a></h1>
+                                <br />
+                <p>This is the v1.9 branch of <a href="http://www.concerto-signage.org/">Concerto</a> as interpreted by <a href="https://github.com/sktea1">Scott Kiser</a> for <a href="http://www.ivytech.edu/">Ivy Tech Community College.</a></p>
+                <br /><br />
+                <div style="clear:both;"></div>
+            </div>
+          </div>
+          <div class="roundbottom"><span class="rb"><img src="<?= ADMIN_BASE_URL ?>/images/blsp.gif" height="6" width="1" alt="" /></span></div>
+        </div>
+</div>
+<br clear="both" />
+<div style="float:left; width:49%;">
 <div class="roundcont newsfeed">
   <div class="roundtop"><span class="rt"><img src="<?= ADMIN_BASE_URL ?>/images/blsp.gif" height="6" width="1" alt="" /></span></div>
   <div class="roundcont_main">
     <div style="text-align:right; float:right; width:85px;">
     	<a href="<?= ADMIN_URL ?>/users/newsfeed/<?= userName() ?>"><span class="buttonsel"><div class="buttonleft"><img src="<?= ADMIN_BASE_URL ?>/images/buttonsel_left.gif" border="0" alt="" /></div><div class="buttonmid"><div class="buttonmid_padding">View All</div></div><div class="buttonright" style="width:10px;"><img src="<?= ADMIN_BASE_URL ?>/images/buttonsel_right.gif" border="0" alt="" /></div></span></a>
     </div>
-    <h1>News Feed</h1>
+    <h1>Recent Submittals and Changes</h1>
     <div id="news_expand">
     <?php 
     if(is_array($this->notifications)) {
@@ -103,7 +122,8 @@ $(function()
   <span style="display:none;" id="seemore"><span id="seemore-inner">View more...</span></span>
   <noscript><div class="roundbottom"><span class="rb"><img src="<?= ADMIN_BASE_URL ?>/images/blsp.gif" height="6" width="1" alt="" /></span></div></noscript>
 </div>
-
+</div>
+<div style="float:right; width:49%;">
 <div class="roundcont">
   <div class="roundtop"><span class="rt"><img src="<?= ADMIN_BASE_URL ?>/images/blsp.gif" height="6" width="1" alt="" /></span></div>
   <div class="roundcont_main">
@@ -116,7 +136,8 @@ $(function()
   </div>
   <div class="roundbottom"><span class="rb"><img src="<?=  ADMIN_BASE_URL ?>/images/blsp.gif" height="6" width="1" alt="" /></span></div>
 </div>
-
+</div>
+<br clear="both" />
 <div class="roundcont">
   <div class="roundtop"><span class="rt"><img src="<?= ADMIN_BASE_URL ?>/images/blsp.gif" height="6" width="1" alt="" /></span></div>
   <div class="roundcont_main">
