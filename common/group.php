@@ -82,7 +82,8 @@ class Group{
 	}
 	
 	function get_members(){
-		$sql = "SELECT user_id FROM user_group WHERE group_id = $this->id";
+        $sql = "SELECT user_id, name FROM user_group INNER JOIN user ON user_id = id WHERE group_id = $this->id ORDER BY name";
+/*		$sql = "SELECT user_id FROM user_group WHERE group_id = $this->id"; */
 		$res = sql_query($sql);
 		$i = 0;
 		$found = false;
